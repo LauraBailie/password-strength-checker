@@ -7,6 +7,9 @@ def check_password_strength(password):
     # Length check
     if len(password) >= 8:
         score += 1
+    
+    if len(password) < 12:
+        print("Warning: Passwords shorter than 12 characters may be vulnerable to brute-force attacks.")
 
     # Uppercase check
     if re.search(r"[A-Z]", password):
